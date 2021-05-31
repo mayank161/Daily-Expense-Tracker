@@ -1,0 +1,40 @@
+<script src="./header.js"></script>
+<div class="v1"></div>
+<div class="search">
+    <input type="search" name="search">
+</div>
+<div class="v1"></div>
+<div class="btns">
+    <button>Daily</button>
+    <button>Monthly</button>
+    <button>Yearly</button>
+</div>
+<div class="today">
+    <div class="first">
+        <h2> today expenses(₹)</h2>
+        <select name="type">
+            <option value="1">Expense</option>
+            <option value="2">Income</option>
+        </select>
+        <br>
+        <input type="number" name="expense" value="0000">
+        <br>Description <br>
+        <input type="text" maxlength="20">
+        <button type="submit" onclick="take(event)"> add</button>
+    </div>
+    <div class="second">
+        <h3>Total Income(₹)</h3>
+        <div class="in">
+            <p>0000</p>
+            <p></p>
+        </div>
+        <h3>total Expense(₹)</h3>  
+        <div class="in">
+            <p>0000</p>
+            <p></p>
+        </div>   
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+<script src="../JAVASCRIPT/main.js"></script>
+</body>

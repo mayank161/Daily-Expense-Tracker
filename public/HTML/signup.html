@@ -1,0 +1,36 @@
+    <script src="./header.js"></script>
+    <div class="center">
+       <!-- <form action="/public/HTML/signup.html" method="POST" class="ss"> -->
+            <div class="type">
+                <label for="name">Name</label>
+                <input type="text" name="name" value="">
+            </div>
+            <div class="type">
+                <label for="Email">Email</label>
+                <input type="email" name="email" value="">
+            </div>
+            <div class="type">
+                <label for="password">password</label>
+                <input type="password" name="password" value="">
+            </div>
+            <button class="btn" type="submit" onclick="signUp()">signUp</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script>
+         async function signUp() {
+            const user = document.getElementsByClassName('type');
+            console.log(user[2].children[1].value,user.length);
+            const name = user[0].children[1].value;
+            const email = user[1].children[1].value;
+            const password =  await user[2].children[1].value;
+            console.log(password);
+            const data = await axios.post('http://localhost:3000/signup',
+            {
+                name: name,
+                email: email,
+                password: password
+            })
+        }
+    </script>
+</body>
+</html>
