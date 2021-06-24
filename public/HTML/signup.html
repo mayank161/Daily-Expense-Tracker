@@ -29,7 +29,10 @@
                 name: name,
                 email: email,
                 password: password
-            })
+            });
+            if(data.data.message == 401) { alert("user already exist")}
+            // localStorage.setItem("userId",data.data.userId)
+            // console.log(localStorage.getItem("userId"));
         }
     </script>
 </body>

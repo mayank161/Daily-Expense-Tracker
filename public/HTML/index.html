@@ -5,9 +5,9 @@
 </div>
 <div class="v1"></div>
 <div class="btns">
-    <button>Daily</button>
-    <button>Monthly</button>
-    <button>Yearly</button>
+    <button id="1">Daily</button>
+    <button id="2" onclick="month()">Monthly</button>
+    <button id="3" onclick="year()">Yearly</button>
 </div>
 <div class="today">
     <div class="first">
@@ -15,6 +15,16 @@
         <select name="type">
             <option value="1">Expense</option>
             <option value="2">Income</option>
+        </select>
+        <select name="cat">
+            <option value="not defined" hidden>category</option>
+            <option>house</option>
+            <option>movie</option>
+            <option>study</option>
+            <option>sports</option>
+            <option>personal</option>
+            <option>Food</option>
+            <option>others</option>
         </select>
         <br>
         <input type="number" name="expense" value="0000">
@@ -34,6 +44,15 @@
             <p></p>
         </div>   
     </div>
+</div>
+<div class="month">
+    <input onchange="getMonth()" type="month">
+    <div class="inner"></div>
+</div>
+<div class="year">
+    <input type="number" value="2020">
+    <button onclick="getYear()"> get the year data</button>
+    <div class="inner"></div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
 <script src="../JAVASCRIPT/main.js"></script>

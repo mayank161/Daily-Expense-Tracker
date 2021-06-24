@@ -75,3 +75,57 @@ h1 {
     display: flex;
     justify-content: space-between;
 }
+.month {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+
+.month input{
+     margin: 2% auto;
+     padding: 0% 1%;
+     background-color: greenyellow;
+}
+
+.inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.monthData {
+    border: solid black;
+    background-color: greenyellow;
+    margin: 2% 3%;
+    text-align: center;
+}
+
+.year{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.yearData {
+    background-color: greenyellow;
+    border: solid black;
+}
+
+.year input{
+    margin: 2% auto;
+    padding: 0% 1%;
+    background-color: greenyellow;
+}
+
+.find {
+    display: flex;
+    justify-content: space-evenly;
+}
+/* .find > *{
+    margin: 1%;
+} */
+/* .find div {
+    margin: 1%;
+} */

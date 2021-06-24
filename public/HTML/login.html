@@ -1,0 +1,33 @@
+<script src="./header.js"></script>
+    <div class="center">
+        <!--<form action="./index.html" method="POST">-->
+            <div class="type">
+                <label for="name">email</label>
+                <input type="email" name="email" value="">
+            </div>
+            <div class="type">
+                <label for="name">password</label>
+                <input type="password" name="password" value="">
+            </div>
+            <button class="btn" type="submit" onclick="login()">login</button>
+    </div>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script>
+        const d = new Date
+        console.log(d.getMonth() + "/" + d.getFullYear())
+        async function login() {
+            const value = document.getElementsByClassName('type');
+            const email = value[0].children[1].value;
+            const password = value[1].children[1].value;
+
+            const user = await axios.post('http://localhost:3000/login',
+            {
+                email: email,
+                password: password
+            });
+
+            console.log(user.data.jwtToken);
+            localStorage.setItem('token',user.data.jwtToken);
+        }
+    </script>
+</form>

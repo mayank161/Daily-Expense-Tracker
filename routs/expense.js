@@ -10,8 +10,16 @@ const userController = require('../controller/user');
 //      .catch(err => console.log(err));
 // })
 router.get('/user', userController.getUser)
-router.get('/expense', expenseController.getExpense);
+// router.get('/expense', expenseController.getExpense);
 
-router.post('/expense',expenseController.postData);
+router.get('/:month', expenseController.getMonth);
+
+router.get('/last/:year', expenseController.getYear);
+
+router.post('/expense', userController.authenticated, expenseController.postData);
+
+router.get('/day/:date', userController.authenticated, expenseController.getDay);
+
+router.get('/max/user', userController.authenticated, expenseController.getMax);
 
 module.exports = router;

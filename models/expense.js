@@ -1,3 +1,4 @@
+const { STRING } = require('sequelize');
 const Sequelize = require('sequelize');
 const sequelize = require('../util/database');
 const db = require('../util/database')
@@ -10,7 +11,11 @@ const expense = db.define('daily', {
         primaryKey: true
       },
     type: {
-        type: Sequelize.CHAR,
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    catagory: {
+        type: Sequelize.STRING,
         allowNull: false
     },
     value: {
